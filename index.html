@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShaveSmartly</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body {
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .glow {
+    box-shadow: 0 0 40px rgba(56,189,248,0.25);
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg,#22d3ee,#3b82f6,#9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-lift {
+    transition: all .4s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+
+  .blur-bg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #3b82f6;
+    filter: blur(120px);
+    opacity: .2;
+    border-radius: 50%;
+  }
+</style>
+
+</head>
+
+<body>
+
+<!-- BACKGROUND GLOW -->
+<div class="blur-bg top-10 left-10"></div>
+<div class="blur-bg bottom-10 right-10 bg-purple-500"></div>
+
+<!-- NAVBAR -->
+<header class="fixed w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+    <h1 class="text-xl font-bold gradient-text">ShaveSmartly</h1>
+
+    <nav class="hidden md:flex gap-8 text-sm">
+      <a href="#" class="hover:text-cyan-400">Home</a>
+      <a href="#" class="hover:text-cyan-400">Shaver</a>
+      <a href="#" class="hover:text-cyan-400">Trimmer</a>
+      <a href="#" class="hover:text-cyan-400">Clipper</a>
+      <a href="#" class="hover:text-cyan-400">Blog</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-xl">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden p-4 bg-black/90 md:hidden">
+    <a href="#" class="block py-2">Home</a>
+    <a href="#" class="block py-2">Shaver</a>
+    <a href="#" class="block py-2">Trimmer</a>
+    <a href="#" class="block py-2">Clipper</a>
+    <a href="#" class="block py-2">Blog</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center text-center px-4 relative">
+
+  <div class="max-w-3xl">
+
+    <h2 class="text-5xl md:text-7xl font-extrabold leading-tight">
+      Shave Smarter.<br>
+      <span class="gradient-text">Look Elite.</span>
+    </h2>
+
+    <p class="mt-6 text-gray-300 text-lg">
+      Premium grooming guides, unbiased reviews, and expert comparisons
+      to help you choose the perfect electric shaver.
+    </p>
+
+    <div class="mt-8 flex justify-center gap-4">
+      <button class="px-6 py-3 bg-cyan-500 rounded-full glow hover:bg-cyan-600">
+        Start Here
+      </button>
+
+      <button class="px-6 py-3 border border-white/20 rounded-full hover:bg-white/10">
+        Explore Reviews
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TRUST BADGES -->
+<section class="text-center py-10 border-y border-white/10">
+  <p class="text-gray-400">Trusted by grooming enthusiasts worldwide</p>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section class="max-w-7xl mx-auto py-20 px-4">
+
+  <h3 class="text-4xl font-bold text-center mb-16">Explore Categories</h3>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+    <div class="glass p-8 rounded-3xl hover-lift">
+      <h4 class="text-2xl font-semibold mb-3">Shavers</h4>
+      <p class="text-gray-400">Top electric razors for smooth shaving.</p>
+    </div>
+
+    <div class="glass p-8 rounded-3xl hover-lift">
+      <h4 class="text-2xl font-semibold mb-3">Trimmers</h4>
+      <p class="text-gray-400">Perfect beard & body grooming tools.</p>
+    </div>
+
+    <div class="glass p-8 rounded-3xl hover-lift">
+      <h4 class="text-2xl font-semibold mb-3">Clippers</h4>
+      <p class="text-gray-400">Sharp, precise haircut solutions.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FEATURED GUIDES -->
+<section class="bg-white/5 py-20">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <h3 class="text-4xl font-bold text-center mb-16">
+      Most Popular Guides
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass p-6 rounded-2xl hover-lift">
+        <h4 class="text-xl font-semibold">Best Electric Razors 2026</h4>
+        <p class="text-gray-400 mt-2">Top picks & buying guide.</p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl hover-lift">
+        <h4 class="text-xl font-semibold">Best Beard Trimmers</h4>
+        <p class="text-gray-400 mt-2">Perfect stubble tools.</p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl hover-lift">
+        <h4 class="text-xl font-semibold">Best Hair Clippers</h4>
+        <p class="text-gray-400 mt-2">Buzz cut essentials.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MISSION -->
+<section class="max-w-4xl mx-auto py-24 text-center px-4">
+
+  <h3 class="text-4xl font-bold mb-6">Our Mission</h3>
+
+  <p class="text-gray-300 leading-relaxed text-lg">
+    We simplify your grooming choices with deep research, real-world testing,
+    and honest comparisons — helping you find the perfect shaving tool
+    without confusion.
+  </p>
+
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-20 text-center">
+
+  <div class="max-w-xl mx-auto glass p-10 rounded-3xl">
+
+    <h3 class="text-3xl font-bold mb-4">Join Our Newsletter</h3>
+
+    <p class="text-gray-400 mb-6">
+      Get expert grooming tips & exclusive deals.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-3">
+      <input type="email" placeholder="Enter your email"
+        class="flex-1 px-4 py-3 rounded-lg text-black">
+
+      <button class="px-6 py-3 bg-cyan-500 rounded-lg hover:bg-cyan-600">
+        Subscribe
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOG -->
+<section class="max-w-7xl mx-auto py-20 px-4">
+
+  <h3 class="text-4xl font-bold text-center mb-16">Latest Articles</h3>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="glass p-6 rounded-2xl hover-lift">
+      <h4>Body Trimmers 2026</h4>
+      <p class="text-gray-400 mt-2">Ultimate guide.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl hover-lift">
+      <h4>Braun Series 9 Review</h4>
+      <p class="text-gray-400 mt-2">Worth it?</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl hover-lift">
+      <h4>Buzz Cut Clippers</h4>
+      <p class="text-gray-400 mt-2">Sharp tools.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 py-10 text-center text-gray-400">
+  © 2026 ShaveSmartly. All rights reserved.
+</footer>
+
+<script>
+const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
+</script>
+
+</body>
+</html>
